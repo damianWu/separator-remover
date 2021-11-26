@@ -37,10 +37,9 @@ PunctStream& PunctStream::operator>>(std::string& s) {
         buffer_.clear();
 
         std::string line;
-        getline(source_,
-                line);  // odczytaliśmy całą linijke, ale chcemy zwrócić
-                        // tylko pierwszy wyraz.
-                        // Może być wielolinijkowe.
+        getline(source_, line);  // odczytaliśmy całą linijke, ale chcemy
+                                 // zwrócić tylko pierwszy wyraz.
+                                 // Może być wielolinijkowe.
         for (auto& ch : line) {
             if (is_whitespace(ch)) {
                 ch = ' ';
