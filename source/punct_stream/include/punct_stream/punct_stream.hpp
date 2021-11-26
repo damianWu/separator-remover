@@ -10,18 +10,18 @@ class PunctStream {
     explicit PunctStream(std::istream& is);
     void whitespace(const std::string& s);
     void add_white(char ch);
-    bool is_whitespace(char ch);
     void case_sensitive(bool b);
-    bool is_case_sensitive();
+    bool is_whitespace(char ch) const;
+    bool is_case_sensitive() const;
 
     PunctStream& operator>>(std::string& s);
     explicit operator bool() const;
 
  private:
-    std::istream& source;
-    std::istringstream buffer;
-    std::string white;
-    bool sensitive;
+    std::istream& source_;
+    std::istringstream buffer_;
+    std::string white_;
+    bool sensitive_;
 };
 
 #endif  // PUNCT_STREAM_PUNCT_STREAM_HPP
