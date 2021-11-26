@@ -8,13 +8,23 @@
 //
 // Init:    case senstitive -> true
 // Input:   For any integer N, do sth.
-// Output:  For any integer N do sth
+// Output:  For
+//          any
+//          integer
+//          N
+//          do
+//          sth
 
 // Example #2
 //
 // Init:    case senstitive -> false
 // Input:   for any; integer N, do sth.
-// Output:  for any integer n do sth
+// Output:  for
+//          any
+//          integer
+//          n
+//          do
+//          sth
 
 // Example #3
 //
@@ -36,6 +46,13 @@
 //          two
 //          use
 
+// Example #4
+//
+// Init:    case senstitive -> false
+// Input:   yes.no
+// Output:  yes
+//          no
+
 int main() {
     try {
         PunctStream ps{std::cin};
@@ -48,9 +65,9 @@ int main() {
         }
 
         std::sort(words.begin(), words.end());
-        auto words_size{words.size()};
-        for (size_t i = 0; i < words_size; ++i) {
-            // Print without duplicates
+
+        for (size_t i = 0; i < words.size(); ++i) {
+            // Print w/o duplicates
             if (i == 0 || words.at(i) != words.at(i - 1)) {
                 std::cout << words.at(i) << '\n';
             }
